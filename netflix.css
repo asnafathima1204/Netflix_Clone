@@ -273,14 +273,14 @@ nav{
 
 }
 
-.col {
+.col{
     justify-content: space-around;
     width: 50%;
     display: flex;
 }
 
 .carouselCard{
-    width: 25%;
+    width: 30%;
     /* border: 2px solid yellow; */
     height: 38vh;
     border-radius: 20px;
@@ -314,8 +314,9 @@ nav{
 .planCard,
 .reasonCard{
     border: 2px solid rgba(244, 252, 244, 0.215);
-    height: 38vh;
-    width: 23%;
+    height: 43vh;
+    width: 45%;
+    margin: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -323,15 +324,11 @@ nav{
     border-radius: 20px;
 }
 
-.planscol{
+.planscol,
+.reasoncol{
     display: flex;
     width: 100%;
     justify-content: space-between;
-}
-
-.planCard{
-    width: 45%;
-    margin: auto;
 }
 
 .planCard h2{
@@ -367,7 +364,7 @@ nav{
 .reasonCard{
     background-color: #252323;
     border: none;
-    height: 33vh;
+    height: 47vh;
 }
 
 .reasonCard h2{
@@ -466,6 +463,7 @@ nav{
     /* border: 1px solid green; */
     width: 100%;
     margin: auto;
+    display: flex;
     font-size: 1.2rem;
 }
 
@@ -476,6 +474,7 @@ nav{
 }
 
 .footerMiddleContainer{
+    border: 2px solid red;
     margin: 5vh 0;
     height: 30vh;
     display: flex;
@@ -483,9 +482,15 @@ nav{
     width: 100%;
 }
 
+.footercol{
+    width: 50%;
+    height: auto;
+    display: flex;
+}
+
 .footerCard{
     /* border: 2px solid yellow; */
-    width: 20%;
+    width: 100%;
 }
 
 .footerCard p{
@@ -515,16 +520,19 @@ nav{
         font-size: 0.8rem;
     }
 
-    .plansContainer{
+    .plansContainer,
+    .reasonContainer{
         display: block;
     }
     
-    .planscol{
+    .planscol,
+    .reasoncol{
         display: flex;
         width: 100%;
     }
 
-    .planCard{
+    .planCard,
+    .reasonCard{
         display: block;
         width: 45%;
         margin:1rem auto;
@@ -580,7 +588,32 @@ nav{
         text-align: center;
     }
 
+    .reasonToJoinSection h2{
+        font-size: 1.5rem;
+    }
+
+    .reasonCard h2{
+        text-align: left ;
+    }
+
+    .footerMiddleContainer{
+        height: auto;
+    }
+
+    .footercol{
+        width: 50%;
+        display: block;
+    }
+    
+    .footerCard{
+        /* border: 2px solid yellow; */
+        width: 100%;
+        height: auto;
+    }
+
 }
+
+
 
 /* Extra small screens (phones) */
 @media (max-width: 768px) {
@@ -610,24 +643,40 @@ nav{
 
     .carouselSection h2,
     .planSection h2,
-    .reasonToJoinSection h2,
-    .faqSection h2{
-        font-size: 2rem;
+    .faqSection h2,
+    .reasonToJoinSection h2{
+        font-size: 1.5rem;
     }
 
     /* .plansContainer{
         display: block;
     } */
     
-    .planscol{
+    .planscol,
+    .reasoncol{
         display: block;
         width: 100%;
     }
 
-    .planCard{
+    .planCard,
+    .reasonCard{
         width: 100%;
         /* display: block; */
         /* margin:1rem auto; */
+    }
+
+    .faqSection p{
+        font-size: 1rem;
+    }
+
+    .faqQuestion span{
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .getStartedSection{
+        font-size: 1rem;
+        text-align: center;
     }
 
     
@@ -677,12 +726,18 @@ nav{
         width: 90%;
     }
 
+    .bannerSection{
+        height: 85vh;
+    }
+
     .bannerContainer h2{
         font-size: 2rem;
+        text-align: center;
         width: 95%;
     }
 
-    .bannerContainer h4{
+    .bannerContainer h4,
+    .bannerContainer p{
         text-align: center;
     }
 
@@ -711,7 +766,18 @@ nav{
     .planSection h2,
     .reasonToJoinSection h2,
     .faqSection h2{
-        font-size: 1.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .planCard h4,
+    .reasonCard h2{
+        font-size: 1rem;
+    }
+
+    .carouselSection p,
+    .planSection p,
+    .reasonToJoinSection p{
+        font-size: 0.6rem;
     }
 
     .menuList{
@@ -724,11 +790,70 @@ nav{
         display: block;
     }
 
-    .planCard{
+    .planCard,
+    .reasonCard{
         /* display: block; */
         width: 100%;
-        height: 40vh;
+        height: auto;
         /* margin:1rem auto; */
     }
+
+    .reasonCard{
+        text-align: center;
+    }
+
+    .reasonCard h2{
+        text-align: center;
+    }
+    
+    .reasonCardLowerContent{
+        justify-content: center;
+        margin: 1rem 0;
+    }  
+
+    .faqSection p{
+        font-size: 0.7rem;
+    }
+
+    .faqQuestion span{
+        font-size: 1rem;
+        font-weight: 900;
+    }
+
+    .getStartedSection{
+        font-size: 0.7rem;
+    }
+
+    .footerMiddleContainer{
+        width: 100%;
+        display: block;
+        font-size: 0.7rem;
+    }
+
+    .footercol{
+        width: 100%;
+    }
+
+    .footerUpperContainer{
+        text-align: center;
+        font-size: 0.8rem;
+        display: block;
+    }
+
+    .footerLowerContainer,
+    .netflixIndia{
+        text-align: center;
+    }
+    
+    .languageButtonContainer{
+        align-items: center;
+        margin: auto;
+    }
+
+    .languaueButton{
+        text-align: center;
+        margin: auto;
+    }
+   
 
 }
